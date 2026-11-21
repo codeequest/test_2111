@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coffee Around the World</title>
+  <style>
+    :root {
+      --bg: #faf6f1;
+      --card: #ffffff;
+      --text: #2b1d14;
+      --muted: #7a6656;
+      --accent: #8b5a2b;
+      --border: #eadfd3;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #1c1410;
+        --card: #2a1f19;
+        --text: #f3e9df;
+        --muted: #bca898;
+        --accent: #d9a066;
+        --border: #3d2e25;
+      }
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: Georgia, "Times New Roman", serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      padding: 0 16px;
+    }
+    header {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 64px 0 32px;
+      text-align: center;
+    }
+    header h1 { font-size: clamp(2rem, 6vw, 3rem); margin-bottom: 8px; }
+    header p { color: var(--muted); font-size: 1.1rem; }
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 16px;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 20px;
+      transition: transform 0.2s ease;
+    }
+    .card:hover { transform: translateY(-3px); }
+    .card .country {
+      font-family: system-ui, sans-serif;
+      font-size: 0.8rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--accent);
+    }
+    .card h2 { font-size: 1.3rem; margin: 4px 0 8px; }
+    .card p { color: var(--muted); font-size: 0.95rem; }
+    .fact {
+      max-width: 800px;
+      margin: 32px auto;
+      padding: 20px;
+      border-left: 4px solid var(--accent);
+      background: var(--card);
+      border-radius: 0 12px 12px 0;
+    }
+    footer {
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.85rem;
+      padding: 32px 0 48px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>☕ Coffee Around the World</h1>
+    <p>Same bean, very different traditions.</p>
+  </header>
+
+  <main>
+    <article class="card">
+      <div class="country">Italy</div>
+      <h2>Espresso</h2>
+      <p>Short and strong, usually drunk standing at the bar in a minute or two. Cappuccino is mostly a morning drink.</p>
+    </article>
+    <article class="card">
+      <div class="country">Turkey</div>
+      <h2>Türk Kahvesi</h2>
+      <p>Finely ground coffee simmered in a small pot called a cezve and served unfiltered, with the grounds settling at the bottom of the cup.</p>
+    </article>
+    <article class="card">
+      <div class="country">Vietnam</div>
+      <h2>Cà Phê Sữa Đá</h2>
+      <p>Dark-roast coffee dripped through a small metal phin filter over sweetened condensed milk, then poured over ice.</p>
+    </article>
+    <article class="card">
+      <div class="country">Ethiopia</div>
+      <h2>Buna Ceremony</h2>
+      <p>Beans are roasted, ground and brewed in a jebena clay pot in front of guests. It's a social ritual that can last hours.</p>
+    </article>
+    <article class="card">
+      <div class="country">Morocco</div>
+      <h2>Spiced Coffee</h2>
+      <p>Often brewed with spices such as cinnamon, black pepper, ginger or nutmeg for a warm, aromatic cup.</p>
+    </article>
+    <article class="card">
+      <div class="country">Sweden</div>
+      <h2>Fika</h2>
+      <p>Less a drink than a habit: a daily break for coffee and something sweet, often a cinnamon bun, shared with friends or coworkers.</p>
+    </article>
+  </main>
+
+  <div class="fact">
+    <strong>Did you know?</strong> Legend says coffee was discovered in Ethiopia by a goat herder named Kaldi, who noticed his goats became energetic after eating red berries from a certain shrub.
+  </div>
+
+  <footer>Made with HTML &amp; CSS · Enjoy your next cup</footer>
+</body>
+</html>
